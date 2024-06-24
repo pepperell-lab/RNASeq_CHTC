@@ -1,15 +1,15 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
 docker_image = staphb/bwa
-#arguments = "$(REF) $(RUN)"
-executable = bwaMEM.sh
+arguments = "mem -M -t 8 MtbNCBIH37Rv.fa 5075_10_S1_1P.fq.gz 5075_10_S1_2P.fq.gz > 5075_10_S1.sam"
+#executable = bwaMEM.sh
 
 output = bwaMEM_5075_10_S1.out
 error = bwaMEM_5075_10_S1.err
 log = bwaMEM_5075_10_S1.log
 
 # Rules to transfer and transferring files
-transfer_executable = TRUE
+transfer_executable = FALSE
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
