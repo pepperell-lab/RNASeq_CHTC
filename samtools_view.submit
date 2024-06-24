@@ -1,15 +1,15 @@
 # Give Docker and argument and then set output, error, and log.
 universe = Docker
 docker_image = staphb/samtools
-#arguments = "$(RUN)"
-executable = samtools_view.sh
+arguments = "view -bhSu $1.sam > $1.bam"
+#executable = samtools_view.sh
 
 output = samtools_view_5075_10_S1.out
 error = samtools_view_5075_10_S1.err
 log = samtools_view_5075_10_S1.log
 
 # Rules to transfer and transferring files
-transfer_executable = TRUE
+transfer_executable = FALSE
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
