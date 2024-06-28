@@ -1,0 +1,11 @@
+universe = vanilla
+transfer_executable = FALSE
+executable = /bin/sleep
+arguments = 1
+log = dummy.log
+output = dummy.out
+error = dummy.err
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+queue
